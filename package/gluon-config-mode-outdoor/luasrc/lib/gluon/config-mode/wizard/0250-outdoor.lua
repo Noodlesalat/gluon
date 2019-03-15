@@ -1,4 +1,3 @@
-
 return function(form, uci)
 	local outdoor_mode = uci:get_bool('gluon', 'wireless', 'outdoor')
 
