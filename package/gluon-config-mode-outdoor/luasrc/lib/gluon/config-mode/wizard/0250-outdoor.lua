@@ -19,6 +19,7 @@ return function(form, uci)
 	function outdoor:write(data)
 		if data ~= outdoor_mode then
 			uci:set('gluon', 'wireless', 'outdoor', data)
+			uci:commit('gluon')
 			os.execute('/lib/gluon/upgrade/200-wireless')
 		end
 	end
